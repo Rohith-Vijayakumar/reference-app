@@ -4,13 +4,13 @@ const styles= StyleSheet.create({
     splashScreen : {
         flex : 1,
         justifyContent : "center",
-        alignContent : "center"
+        alignContent : "center",
+        backgroundColor : "white"
     },
     text :{
-        fontSize : 20,
+        fontSize : 26,
         fontWeight : "bold",
         color : "#051C60",
-        margin : 10,
         alignContent : "center",
         textAlign : "center"
     }

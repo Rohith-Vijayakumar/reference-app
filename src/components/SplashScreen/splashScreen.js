@@ -10,7 +10,8 @@ const SplashScreen = ({navigation}) => {
     return (
 
         <View style={styles.splashScreen}>
-           <Text style={styles.text}>React Native Starter Kit</Text>
+           <Text style={styles.text}>React Native</Text>
+           <Text style={styles.text}>Starter Kit</Text>
         </View>
 
     )

@@ -11,6 +11,8 @@ import SignInScreen from '../screens/SignIn/signInScreen';
 import SignUpScreen from '../screens/SignUp/signUpScreen';
 import SplashScreen from '../components/SplashScreen/splashScreen';
 
+import Header from '../components/CustomHeader/customHeader';
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -40,6 +42,7 @@ export default function navigation() {
                 component={SignInScreen}
                 options={{
                     headerShown: true,
+                    headerTitle: (props) => <Header {...props} />
                 }} />
 
             <Stack.Screen
@@ -48,14 +51,15 @@ export default function navigation() {
                 options={{
                     headerShown: true,
                     gestureEnabled: true,
+                    headerTitle: (props) => <Header {...props} />
                 }} />
 
             <Stack.Screen
                 name="BottomTabNavigator"
                 component={BottomNavigator}
                 options={{
-                    headerTitle : "",
-                    headerShown: true
+                    headerShown: true,
+                    headerTitle: (props) => <Header {...props} />
                 }} />
         </Stack.Navigator>
     }
