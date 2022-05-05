@@ -10,7 +10,7 @@ Application framework valid only for Hexaware Engagements.
 #### Prerequisites
 #### Environment Setup
 
-To run the foundation kit in your local machine follow the official React Native Documentation to setup the environment.
+To run the foundation kit in your local machine follow the official React Native Documentation to setup the environment
 [Environment Setup](https://reactnative.dev/docs/environment-setup)
 
 #### Run the App
