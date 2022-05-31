@@ -4,6 +4,14 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
+import com.swmansion.rnscreens.RNScreensPackage;
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+import com.swmansion.reanimated.ReanimatedPackage;
+import com.reactnativepagerview.PagerViewPackage;
+import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+import org.reactnative.maskedview.RNCMaskedViewPackage;
+import org.reactnative.maskedview.RNCMaskedViewPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -12,6 +20,9 @@ import com.facebook.soloader.SoLoader;
 import com.starterkit.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+
+import com.facebook.react.bridge.JSIModulePackage; // << add
+import com.swmansion.reanimated.ReanimatedJSIModulePackage; // << add
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -35,6 +46,11 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSMainModuleName() {
           return "index";
         }
+
+        @Override //<<add this function
+        protected JSIModulePackage getJSIModulePackage() {
+         return new ReanimatedJSIModulePackage(); 
+       }
       };
 
   private final ReactNativeHost mNewArchitectureNativeHost =

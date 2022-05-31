@@ -10,7 +10,7 @@ const SignUpScreen = () => {
     const navigation = useNavigation();
 
     const onRegisterPressed = () => {
-        navigation.navigate("BottomTabNavigator");
+        navigation.navigate("DrawerNavigator");
     }
 
     const onForgotPasswordPressed = () => {

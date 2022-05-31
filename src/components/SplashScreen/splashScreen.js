@@ -1,8 +1,10 @@
 import React from "react";
 import {View,Text} from 'react-native';
 import styles from './style.js';
+import { useNavigation } from "@react-navigation/native";
 
-const SplashScreen = ({navigation}) => {
+const SplashScreen = () => {
+    const navigation=useNavigation();
     setTimeout(() => {
         navigation.replace("Home");
     }, 2000);
