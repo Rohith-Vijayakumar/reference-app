@@ -17,7 +17,7 @@ const DrawerOne = () => {
   return (
     <View style={styles.root}>
       <Text style={styles.screen}>{'Welcome to Drawer 1 Screen'}</Text>
-      <CustomButton text="Go to Drawer 2 Screen " onPress={onDrawerOnePressed} />
+      <CustomButton text="Drawer 2" onPress={onDrawerOnePressed}/>
     </View>
   )
 }
