@@ -13,7 +13,7 @@ const SplashScreen = () => {
 
         <View style={styles.splashScreen}>
            <Text style={styles.text}>React Native</Text>
-           <Text style={styles.text}>Starter Kit</Text>
+           <Text style={styles.text}>Reference App</Text>
         </View>
 
     )
