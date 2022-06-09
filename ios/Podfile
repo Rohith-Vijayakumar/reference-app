@@ -33,6 +33,11 @@ target 'StarterKit' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+
+
   target 'StarterKitTests' do
     inherit! :complete
     # Pods for testing
