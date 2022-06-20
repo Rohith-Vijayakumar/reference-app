@@ -3,6 +3,7 @@ import { RNCamera } from 'react-native-camera';
 
 import {AppRegistry,Linking} from 'react-native'
 import React, { Component } from 'react'
+import 'react-native-gesture-handler';
 
 export default class QRScanner extends Component {
   onSuccess = e => {

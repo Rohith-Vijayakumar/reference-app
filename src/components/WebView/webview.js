@@ -3,6 +3,7 @@ import { SafeAreaView, ActivityIndicator, View, Text } from 'react-native';
 import styles from './style.js';
 import { WebView } from 'react-native-webview';
 import NewUrl from '../../utils/constants/URL'
+import 'react-native-gesture-handler';
 
 const WebviewScreen = () => {
 

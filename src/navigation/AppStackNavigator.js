@@ -3,7 +3,7 @@ import React from 'react'
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import BottomNavigator from './BottomNavigator'
-import WebView from '../components/WebView/webview'
+import WebView from '../components/WebView/webView'
 import Header from '../components/CustomHeader/customHeader'
 import QRScanner from '../components/QRScanner/qrCodeScanner'
 
@@ -51,4 +51,3 @@ export default function AppNavigator() {
   )
 
 }
-

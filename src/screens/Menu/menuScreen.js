@@ -1,8 +1,9 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import styles from './style'
-import { useNavigation } from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native'
 import CustomButton from '../../components/CustomButton/customButton'
+import 'react-native-gesture-handler';
 
 const Menu = () => {
 

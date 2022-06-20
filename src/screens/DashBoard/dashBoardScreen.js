@@ -1,14 +1,118 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
-import CustomButton from '../../components/CustomButton/customButton';
+import {View, Text,Image,ScrollView, TouchableOpacity,SafeAreaView} from 'react-native';
 import styles from './style.js';
-import {Auth} from '../../services';
+import BottomSheet from 'reanimated-bottom-sheet';
+import Animated from 'react-native-reanimated';
+import CustomButton from '../../components/CustomButton/customButton'
+import {useNavigation} from '@react-navigation/native'
 
 const DashBoard = () => {
-  return (
-    <View style={styles.root}>
-      <Text>DashBoard</Text>
+  const navigation = useNavigation()
+  
+  const onWebViewPressed = () => {
+    navigation.navigate('WebView')
+}
+const QRScannerPressed = () => {
+  navigation.navigate('QRScanner')
+}
+
+   renderInner =() =>(
+    <View style={styles.panel}>
+    <View >
+    <Image style={styles.bottomImage} source={require('../../../assets/Card1.jpg') } />
+      <Text style={styles.panelTitle} > Hold Tight !</Text>
+      <Text style={styles.panelTitle}>It's coming soon</Text>
     </View>
+    <TouchableOpacity style={{marginLeft:50}}>
+        {/* <Text style={styles.panelButtonTitle}>Cancel</Text> */}
+        <CustomButton text="Cancel" onPress={() => this.bs.current.snapTo(1)}  />
+      </TouchableOpacity>
+      
+    </View>
+  )
+
+   renderHeader =() =>(
+    <View style={styles.header}>
+      <View style={styles.panelHeader}>
+        <View style={styles.panelHandle}>
+
+        </View>
+      </View>
+    </View>
+  )
+
+  bs=React.createRef();
+  fall = new Animated.Value(1);
+
+  return (
+    <SafeAreaView>
+      <ScrollView>
+    <View >
+      <BottomSheet 
+      ref={this.bs}
+      snapPoints={[420,0]}
+      renderContent={this.renderInner}
+      renderHeader={this.renderHeader}
+      initialSnap={1}
+      callbackNode={this.fall}
+      enabledGestureInteraction={true}
+      />
+      <Animated.View  style={{opacity:Animated.add(0.3, Animated.multiply(this.fall, 1.0))}}>
+      
+      <View >
+        <View >
+        <ScrollView horizontal >
+        <Image style={styles.image} source={require('../../../assets/Card1.jpg') } />
+        <Image style={styles.image} source={require('../../../assets/Card1.jpg') } />
+        <Image style={styles.image} source={require('../../../assets/Card1.jpg') } />
+        <Image style={styles.image} source={require('../../../assets/Card1.jpg') } />
+        </ScrollView>
+        </View>
+        <View >
+        <View style={styles.activityView} >
+        <Text style={styles.activityText}>My Activity </Text>
+        <Text style={styles.viewstyle}>View All </Text> 
+        </View>
+        <Text style={styles.caption}>You're Caught Up ! </Text>
+        </View>
+        <View style={styles.gridContainer} >
+        <View style={styles.cardContainer} >
+        <TouchableOpacity onPress={()=> this.bs.current.snapTo(0)}>
+          <Text style={styles.text}>Events</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text}>Booking</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text}>Account</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text}>Meeting</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text}>FAQs</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text}>Calendar</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text}>Details</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text} onPress={QRScannerPressed}>Scan QR</Text>
+        </View>
+        <View style={styles.cardContainer} >
+          <Text style={styles.text} onPress={onWebViewPressed} >webView</Text> 
+        </View>
+        </View>
+
+      </View>
+
+      </Animated.View>
+      </View>
+      </ScrollView>
+      </SafeAreaView>
   );
 };
 
