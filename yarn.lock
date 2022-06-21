@@ -6575,6 +6575,11 @@
     "escape-string-regexp" "2.0.0"
     "invariant" "2.2.4"
 
+"react-native-x-carousel@^1.0.1":
+  "integrity" "sha512-HioYKgsW7RS6EZzVlcLK0PUn/2gk1EF1gv1fCydEEBiGnYjxhtuG+ZKphE2Y4VKRIV4OqgSi3uwPUo1wcR3dvQ=="
+  "resolved" "https://auctioncorp.jfrog.io/auctioncorp/api/npm/npm-internal/react-native-x-carousel/-/react-native-x-carousel-1.0.1.tgz"
+  "version" "1.0.1"
+
 "react-native@*", "react-native@^0.0.0-0 || 0.60 - 0.68 || 1000.0.0", "react-native@>=0.42.0", "react-native@>=0.50.0", "react-native@>=0.57", "react-native@>=0.59.0", "react-native@>=0.60.0", "react-native@>=0.63.3", "react-native@0.68.1":
   "integrity" "sha512-5gfvslo5NO2Ece2k/q41eVOK3ca4u1QAOf+qM+auvOiUA4/QR5Yr0WfSGbRpUr2GaFgv7qP11F4+elCravg7uQ=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.68.1.tgz"

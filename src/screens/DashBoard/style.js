@@ -61,7 +61,10 @@ const styles = StyleSheet.create({
     width:100,
     height:95,
     flexDirection:'row',
-    margin:15,
+    marginTop:14,
+    marginBottom:14,
+    marginRight:14,
+    marginLeft:14,
     backgroundColor:'#66ffcc',
     borderRadius:20,
     alignItems:'center',
@@ -97,7 +100,6 @@ const styles = StyleSheet.create({
     marginTop:10,
   },
   activityView:{
-    marginTop:20,
     padding:10,
   }
   

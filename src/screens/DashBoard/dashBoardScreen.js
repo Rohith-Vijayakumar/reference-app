@@ -1,10 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { View, Text, Image, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, ScrollView, SafeAreaView } from 'react-native';
 import styles from './style.js';
-import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
-import CustomButton from '../../components/CustomButton/customButton'
 import { useNavigation } from '@react-navigation/native'
+import CardsHorizontal from '../../components/CardsHorizontal/cardsHorizontal'
 
 const DashBoard = () => {
   const navigation = useNavigation()
@@ -56,16 +56,17 @@ const DashBoard = () => {
             callbackNode={this.fall}
             enabledGestureInteraction={true}
           /> */}
-          <Animated.View style={{ opacity: Animated.add(0.3, Animated.multiply(this.fall, 1.0)) }}>
+          <Animated.View style={{ opacity: Animated.add(1, Animated.multiply(this.fall, 1.0)) }}>
 
             <View >
               <View >
-                <ScrollView horizontal >
+                {/* <ScrollView horizontal >
                   <Image style={styles.image} source={require('../../../assets/Card1.jpg')} />
                   <Image style={styles.image} source={require('../../../assets/Card1.jpg')} />
                   <Image style={styles.image} source={require('../../../assets/Card1.jpg')} />
                   <Image style={styles.image} source={require('../../../assets/Card1.jpg')} />
-                </ScrollView>
+                </ScrollView> */}
+                <CardsHorizontal />
               </View>
               <View style={styles.activityView}  >
                 <View >
