@@ -3,7 +3,7 @@ import React from 'react'
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import BottomNavigator from './BottomNavigator'
-import WebView from '../components/WebView/webView'
+import Webview from '../components/WebView/webview'
 import Header from '../components/CustomHeader/customHeader'
 import QRScanner from '../components/QRScanner/qrCodeScanner'
 
@@ -32,7 +32,7 @@ export default function AppNavigator() {
         }} />
       <Stack.Screen
         name="WebView"
-        component={WebView}
+        component={Webview}
         options={{
           headerShown: false,
           gestureEnabled: true,

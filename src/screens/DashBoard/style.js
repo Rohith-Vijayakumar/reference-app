@@ -11,8 +11,7 @@ const styles = StyleSheet.create({
   },
   gridContainer:{
     flexWrap: 'wrap',
-    flexDirection: 'row'
-
+    flexDirection: 'row',
   },
   header: {
     backgroundColor: '#FFFFFF',
@@ -85,9 +84,10 @@ const styles = StyleSheet.create({
     fontSize:15,
     fontWeight:'bold',
     marginLeft:20,
+    textAlign: 'center'
   },
   activityText:{
-    fontSize:25,
+    fontSize:24,
     fontWeight:'bold',
     marginLeft:10,
 
@@ -96,17 +96,9 @@ const styles = StyleSheet.create({
     marginLeft:10,
     marginTop:10,
   },
-  viewstyle:{
-    marginTop:-30,
-    marginLeft:280,
-    fontSize:20,
-    fontWeight:'bold',
-
-  },
   activityView:{
     marginTop:20,
-
-
+    padding:10,
   }
   
 

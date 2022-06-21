@@ -21,8 +21,8 @@ const CustomDrawer = props => {
             <TouchableOpacity onPress={onProfilePressed}>
           <Image source={require('../../../assets/profile.jpg')} style={{height:80, width:80, borderRadius:40, marginBottom:10}}  />
           </TouchableOpacity>
-          <Text style={{color:'#fff', fontSize:18, fontFamily:'Roboto-Medium'}} onPress={onProfilePressed}  >Ram</Text>
-          <Text style={{color:'#fff',  fontFamily:'Roboto-Regular'}} onPress={onProfilePressed}>Junior Developer</Text>
+          <Text style={{color:'#fff', fontSize:18}} onPress={onProfilePressed}  >Ram</Text>
+          <Text style={{color:'#fff'}} onPress={onProfilePressed}>Junior Developer</Text>
           </ImageBackground>
 
           <View style={{flex:1, backgroundColor:'#fff',paddingTop:10}}>
