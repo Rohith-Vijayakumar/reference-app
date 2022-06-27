@@ -1,4 +1,6 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
+
+
 
 const styles = StyleSheet.create({
   root: {
@@ -9,17 +11,20 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  gridContainer:{
+  gridContainer: {
     flexWrap: 'wrap',
     flexDirection: 'row',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
   },
   header: {
     backgroundColor: '#FFFFFF',
     shadowColor: '#333333',
-    shadowOffset: {width: -1, height: -3},
+    shadowOffset: { width: -1, height: -3 },
     shadowRadius: 2,
     shadowOpacity: 0.4,
-    // elevation: 5,
     paddingTop: 20,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
@@ -42,8 +47,8 @@ const styles = StyleSheet.create({
   panelTitle: {
     fontSize: 27,
     height: 35,
-    marginLeft:70,
-    
+    marginLeft: 70,
+
   },
   panelButton: {
     padding: 13,
@@ -57,52 +62,56 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
   },
-  cardContainer:{
-    width:100,
-    height:95,
-    flexDirection:'row',
-    marginTop:14,
-    marginBottom:14,
-    marginRight:14,
-    marginLeft:14,
-    backgroundColor:'#66ffcc',
-    borderRadius:20,
-    alignItems:'center',
+  cardContainer: {
+    maxWidth: '28%',
+    height: 94,
+    flexDirection: 'row',
+    backgroundColor: '#66ffcc',
+    borderRadius: 16,
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    margin: 8,
+    padding: 8
   },
-  image:{
+  image: {
     width: 350,
     height: 200,
     borderRadius: 10,
-    marginTop:10,
-    marginLeft:14,
-    marginRight:10,
+    marginTop: 10,
+    marginLeft: 14,
+    marginRight: 10,
   },
-  bottomImage:{
+  bottomImage: {
     width: 350,
     height: 200,
     borderRadius: 10,
-   
-  },
-  text:{
-    fontSize:15,
-    fontWeight:'bold',
-    marginLeft:20,
-    textAlign: 'center'
-  },
-  activityText:{
-    fontSize:24,
-    fontWeight:'bold',
-    marginLeft:10,
 
   },
-  caption:{
-    marginLeft:10,
-    marginTop:10,
+  text: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'auto',
+    textAlign: 'center',
   },
-  activityView:{
-    padding:10,
+  activityText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginLeft: 10,
+
+  },
+  caption: {
+    marginLeft: 10,
+    marginTop: 10,
+  },
+  activityView: {
+    padding: 10,
+    backgroundColor: 'white'
   }
-  
+
 
 });
 
