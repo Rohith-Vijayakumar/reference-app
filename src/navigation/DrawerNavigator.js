@@ -8,13 +8,17 @@ import DrawerTwo from '../components/CustomDrawer/DrawerTwo'
 import About from '../components/CustomDrawer/About'
 import CustomDrawer from '../components/CustomDrawer/CustomDrawer'
 
+//
+import Profile from '../screens/Profile/profileScreen'
+
 
 const Drawer = createDrawerNavigator()
 
 const DrawerRoutes = ()=> {
   return (
-        <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />} >
-            <Drawer.Screen name='HomeScreen' component={BottomNavigator}  />
+        <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}  screenOptions={{drawerActiveBackgroundColor:'#aa18ea',drawerActiveTintColor:'#fff',drawerInactiveTintColor:'#333'}} >
+            <Drawer.Screen name='HomeScreen' component={BottomNavigator}  options={{title:'Home'}} />
+            <Drawer.Screen name='Profile' component={Profile} />
             <Drawer.Screen name='Drawer 1' component={DrawerOne} />
             <Drawer.Screen name='Drawer 2' component={DrawerTwo}  />
             <Drawer.Screen name='About' component={About} />
