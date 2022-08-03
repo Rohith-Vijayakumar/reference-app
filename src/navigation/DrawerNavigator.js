@@ -7,9 +7,11 @@ import DrawerOne from '../components/CustomDrawer/DrawerOne'
 import DrawerTwo from '../components/CustomDrawer/DrawerTwo'
 import About from '../components/CustomDrawer/About'
 import CustomDrawer from '../components/CustomDrawer/CustomDrawer'
+import CheckBox from '../screens/CheckBoxScreen/checkBox'
 
 //
 import Profile from '../screens/Profile/profileScreen'
+import RadioButtonScreen from '../screens/RadioButtonScreen/radioButtonscreeen'
 
 
 const Drawer = createDrawerNavigator()
@@ -22,6 +24,10 @@ const DrawerRoutes = ()=> {
             <Drawer.Screen name='Drawer 1' component={DrawerOne} />
             <Drawer.Screen name='Drawer 2' component={DrawerTwo}  />
             <Drawer.Screen name='About' component={About} />
+            <Drawer.Screen name='CheckBox' options={{title:'CheckBox'}} component={CheckBox} />
+            <Drawer.Screen name='RadioButton' options={{title:'Radio Button'}} component={RadioButtonScreen} />
+            
+
 
         </Drawer.Navigator>
   )

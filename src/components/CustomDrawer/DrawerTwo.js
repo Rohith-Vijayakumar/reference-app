@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles'
 import CustomButton from '../CustomButton/customButton'
 import {useNavigation} from '@react-navigation/native'
+import CustomCheckbox from '../CustomCheckbox/customCheckbox'
 
 
 
@@ -10,6 +11,8 @@ import {useNavigation} from '@react-navigation/native'
 
 const DrawerTwo=() => {
   const navigation = useNavigation()
+  const [music, setMusic] = React.useState(false);
+  
 
   const onBackPressed = () => {
     navigation.goBack();
@@ -23,6 +26,7 @@ const DrawerTwo=() => {
       <Text style={styles.screen}>{"Welcome to Drawer 2 Screen"}</Text>
       
       <CustomButton text="Go Back " onPress={onBackPressed} />
+    
 
     </View>
     </ScrollView>

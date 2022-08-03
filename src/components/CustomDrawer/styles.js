@@ -1,4 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,Dimensions } from 'react-native';
+
 
 const styles = StyleSheet.create({
     root : {
@@ -19,7 +20,12 @@ const styles = StyleSheet.create({
     },
     layout:{
         fontWeight:'bold',
-    }
+    },
+    map:{
+        width:Dimensions.get("window").width,
+        height:Dimensions.get("window").height,
+// const {width, height} = Dimensions.get('window');
+}
     
 
 })
